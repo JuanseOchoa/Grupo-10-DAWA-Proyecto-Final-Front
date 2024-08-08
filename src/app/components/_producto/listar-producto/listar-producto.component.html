@@ -1,0 +1,22 @@
+<h2>Listado de Productos</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Categoría</th>
+      <th>Precio Unitario</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let producto of lstProductos">
+      <td>{{ producto.id }}</td>
+      <td>{{ producto.nombre }}</td>
+      <td>{{ producto.descripcion }}</td>
+      <td>{{ producto.categoria.nombre }}</td>
+      <td>{{ producto.precioUnitario | currency }}</td>
+    </tr>
+  </tbody>
+</table>

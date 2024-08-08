@@ -1,0 +1,16 @@
+<div class="tree" id="tree">
+    <ul>
+      <li *ngFor="let node of treeData" [class.expanded]="node.expanded">
+        <div class="node" (click)="toggleNode(node); onNodeClick(node.name)">
+          <span class="node-icon" *ngIf="node.children && node.children.length > 0">
+            <i class="bi" [ngClass]="node.expanded ? 'bi-chevron-down' : 'bi-chevron-right'"></i>
+          </span>
+          {{ node.name }}
+        </div>
+        <div class="children" *ngIf="node.expanded && node.children && node.children.length > 0">
+          <app-tree [treeData]="node.children" (nodeClick)="onNodeClick($event)"></app-tree>
+        </div>
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,47 @@
+section{
+  background-color: #c5c3c3;;
+}
+.card {
+  max-width: 400px;
+  width: 100%;
+
+}
+
+.logo {
+  border-radius: 50%;
+  width: 25%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-form {
+  display: flex;
+}
+
+.login-form img {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.login-form .form-container {
+  padding: 20px;
+}
+
+.login-form h5 {
+  letter-spacing: 1px;
+}
+
+.btn {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+}
+

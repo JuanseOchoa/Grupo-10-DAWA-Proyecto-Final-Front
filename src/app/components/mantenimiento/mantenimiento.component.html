@@ -1,0 +1,4 @@
+<div class="container">
+    <app-tree class="tree" [treeData]="treeDataMant" (nodeClick)="inputNodeNameMant = $event"></app-tree>
+    <app-crud class="crud" [selectedNodeName]="inputNodeNameMant.trim()"></app-crud>
+</div>

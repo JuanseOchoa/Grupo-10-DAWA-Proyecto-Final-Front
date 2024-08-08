@@ -1,0 +1,27 @@
+<h2>Registrar Producto</h2>
+
+<form (ngSubmit)="guardarProducto()" class="needs-validation" novalidate>
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Nombre:</label>
+    <input type="text" id="nombre" [(ngModel)]="producto.nombre" name="nombre" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label for="descripcion" class="form-label">Descripción:</label>
+    <textarea id="descripcion" [(ngModel)]="producto.descripcion" name="descripcion" class="form-control" required></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="categoria" class="form-label">Categoría:</label>
+    <select id="categoria" [(ngModel)]="producto.categoria" (ngModelChange)="onCategoryChange()" name="categoria" class="form-control" required>
+      <option *ngFor="let categoria of lstCategorias" [value]="categoria.id">{{ categoria.nombre }}</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="precioUnitario" class="form-label">Precio Unitario:</label>
+    <input type="number" id="precioUnitario" [(ngModel)]="producto.precioUnitario" name="precioUnitario" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label for="stock" class="form-label">Stock:</label>
+    <input type="number" id="stock" [(ngModel)]="producto.stock" name="stock" class="form-control" required>
+  </div>
+  <button type="submit" class="btn btn-success">Guardar</button>
+</form>

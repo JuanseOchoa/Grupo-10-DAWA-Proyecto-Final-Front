@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+}
+
+.tree {
+  font-family: Arial, sans-serif;
+  width: 30%;
+  height: 100vh;
+}
+
+.crud {
+  width: 70%;
+  height: 100vh;
+}

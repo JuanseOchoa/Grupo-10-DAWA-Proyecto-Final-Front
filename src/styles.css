@@ -1,0 +1,24 @@
+/* styles.css */
+/* Asegúrate de que el contenedor principal no tenga márgenes ni padding */
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajusta el margen y padding del body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Añade margen superior a la clase main-content para separar el navbar del contenido */
+.main-content {
+    flex: 1;
+    margin-top: 100px; /* Ajusta este valor según sea necesario */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}

@@ -1,0 +1,57 @@
+<div class="componentes_mantenimiento container mt-3">
+
+    <ng-container [ngSwitch]="selectedNodeName">
+        <!-- Clientes -->
+        <ng-container *ngSwitchCase="'Registrar Clientes'">
+            <app-form-cliente class="card card-body"></app-form-cliente>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'Leer Clientes'">
+            <app-listar-cliente class="card card-body"></app-listar-cliente>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'Mantenimiento de Clientes'">
+            <app-mantenimiento-cliente class="card card-body"></app-mantenimiento-cliente>
+        </ng-container>
+
+        <!-- Proveedores -->
+        <ng-container *ngSwitchCase="'Registrar Proveedores'">
+            <app-form-proveedor class="card card-body"></app-form-proveedor>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'Leer Proveedores'">
+            <app-listar-proveedor class="card card-body"></app-listar-proveedor>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'Mantenimiento de Proveedores'">
+            <app-mantenimiento-proveedor class="card card-body"></app-mantenimiento-proveedor>
+        </ng-container>
+
+        <!-- Productos -->
+        <ng-container *ngSwitchCase="'Registrar Productos'">
+            <app-form-producto class="card card-body"></app-form-producto>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'Leer Productos'">
+            <app-listar-producto class="card card-body"></app-listar-producto>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'Mantenimiento de Productos'">
+            <app-mantenimiento-producto class="card card-body"></app-mantenimiento-producto>
+        </ng-container>
+
+        <!-- Categorias -->
+        <ng-container *ngSwitchCase="'Registrar Categorias'">
+            <app-form-categoria class="card card-body"></app-form-categoria>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'Leer Categorias'">
+            <app-listar-categoria class="card card-body"></app-listar-categoria>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'Mantenimiento de Categorias'">
+            <app-mantenimiento-categoria class="card card-body"></app-mantenimiento-categoria>
+        </ng-container>
+
+    </ng-container>
+</div>

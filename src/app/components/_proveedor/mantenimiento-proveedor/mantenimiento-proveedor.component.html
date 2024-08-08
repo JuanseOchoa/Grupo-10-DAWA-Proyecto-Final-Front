@@ -1,0 +1,45 @@
+<div *ngIf="proveedor">
+    <h2>Proveedor Encontrado</h2>
+    <div class="mb-3">
+        <label for="codigo" class="form-label">Código:</label>
+        <input type="text" id="codigo" [(ngModel)]="proveedor.codigo" name="codigo" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre:</label>
+        <input type="text" id="nombre" [(ngModel)]="proveedor.nombre" name="nombre" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label for="direccion" class="form-label">Dirección:</label>
+        <input type="text" id="direccion" [(ngModel)]="proveedor.direccion" name="direccion" class="form-control"  required>
+    </div>
+    <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono:</label>
+        <input type="text" id="telefono" [(ngModel)]="proveedor.telefono" name="telefono" class="form-control"  required>
+    </div>
+    <div class="mb-3">
+        <label for="correoElectronico" class="form-label">Correo Electrónico:</label>
+        <input type="email" id="correoElectronico" [(ngModel)]="proveedor.correoElectronico" name="correoElectronico"
+            class="form-control"  required>
+    </div>
+    <div>
+        <button type="button" class="btn btn-secondary" (click)="limpiarBusqueda()">
+            <i class="bi bi-arrow-left-square"></i> Atrás</button>
+
+        <button type="button" class="btn btn-warning m-1" (click)="editarProveedor()">
+            <i class="bi bi-pencil-square"></i> Editar</button>
+
+        <button type="button" class="btn btn-danger m-1" (click)="eliminarProveedor()">
+            <i class="bi bi-trash3"></i>Eliminar</button>
+    </div>
+</div>
+
+<div *ngIf="!proveedor">
+    <h2>Buscar Proveedor</h2>
+    <div class="mb-3">
+        <label for="codigoBusqueda" class="form-label">Código:</label>
+        <input type="text" id="codigoBusqueda" [(ngModel)]="codigoBusqueda" name="codigoBusqueda" class="form-control">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="buscarProveedor()">
+        Buscar <i class="bi bi-search"></i></button>
+</div>
+

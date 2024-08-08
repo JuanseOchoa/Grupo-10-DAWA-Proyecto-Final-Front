@@ -1,0 +1,12 @@
+<h2>Registrar Categoría</h2>
+<form (ngSubmit)="guardarCategoria()" class="needs-validation" novalidate>
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Nombre:</label>
+    <input type="text" id="nombre" [(ngModel)]="categoria.nombre" name="nombre" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label for="descripcion" class="form-label">Descripción:</label>
+    <textarea id="descripcion" [(ngModel)]="categoria.descripcion" name="descripcion" class="form-control" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-success">Guardar</button>
+</form>

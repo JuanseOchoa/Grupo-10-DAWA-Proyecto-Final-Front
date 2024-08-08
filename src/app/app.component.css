@@ -1,0 +1,26 @@
+/* Asegúrate de que el contenedor principal no tenga márgenes ni padding */
+.container-main {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajusta el margen y padding del body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Asegúrate de que el contenido se muestre correctamente */
+.content {
+    min-height: 100vh; /* Esto asegura que el contenido siempre ocupe al menos la altura completa de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px; /* Aquí puedes ajustar el margen superior como prefieras */
+}
+
+/* Elimina cualquier margen o padding de las filas y columnas iniciales */
+.row.d-flex {
+    margin: 0;
+    padding: 0;
+}

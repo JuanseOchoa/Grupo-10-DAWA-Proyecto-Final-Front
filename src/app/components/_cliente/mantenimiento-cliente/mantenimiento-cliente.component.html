@@ -1,0 +1,49 @@
+<div *ngIf="cliente">
+    <h2>Cliente Encontrado</h2>
+    <div class="mb-3">
+        <label for="cedula" class="form-label">Cédula:</label>
+        <input type="text" id="cedula" [(ngModel)]="cliente.cedula" name="cedula" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre:</label>
+        <input type="text" id="nombre" [(ngModel)]="cliente.nombre" name="nombre" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label for="direccion" class="form-label">Dirección:</label>
+        <input type="text" id="direccion" [(ngModel)]="cliente.direccion" name="direccion" class="form-control"
+        required>
+    </div>
+    <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono:</label>
+        <input type="text" id="telefono" [(ngModel)]="cliente.telefono" name="telefono" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label for="correoElectronico" class="form-label">Correo Electrónico:</label>
+        <input type="email" id="correoElectronico" [(ngModel)]="cliente.correoElectronico" name="correoElectronico"
+            class="form-control" required>
+    </div>
+    <div>
+        <button type="button" class="btn btn-secondary" (click)="limpiarBusqueda()">
+            <i class="bi bi-arrow-left-square"></i> Atras</button>
+            
+        <button type="button" class="btn btn-warning m-1" (click)="editarCliente()">
+            <i class="bi bi-pencil-square"></i> Editar</button>
+
+        <button type="button" class="btn btn-danger m-1" (click)="eliminarCliente()">
+            <i class="bi bi-trash3"></i> Eliminar</button>    
+    </div>
+</div>
+
+<div *ngIf="!cliente">  
+    <h2>Buscar Cliente</h2>
+    <div class="mb-3">
+        <label for="cedulaBusqueda" class="form-label">Cédula:</label>
+        <input type="text" id="cedulaBusqueda" [(ngModel)]="cedulaBusqueda" name="cedulaBusqueda" class="form-control">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="buscarCliente()">
+        Buscar <i class="bi bi-search"></i></button>
+</div>
+
+
+    
+    

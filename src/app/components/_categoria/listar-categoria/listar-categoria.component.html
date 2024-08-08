@@ -1,0 +1,17 @@
+<h2>Listado de Categorías</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID Categoría</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let categoria of lstCategorias">
+            <td>{{ categoria.id }}</td>
+            <td>{{ categoria.nombre }}</td>
+            <td>{{ categoria.descripcion }}</td>
+        </tr>
+    </tbody>
+</table>
